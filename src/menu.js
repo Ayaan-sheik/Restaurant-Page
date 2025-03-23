@@ -109,11 +109,7 @@ function createItem(dishName,Description,image){
 }
 
 function Menu(){
-    const main = document.querySelector(".content"); // ✅ This selects the first element with the class 'content'
-    main.innerHTML = "";
-    main.appendChild(createMenu());
-
-    return main;
+    return createMenu();
 }
 
 export default Menu

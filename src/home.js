@@ -1,19 +1,19 @@
 import chefImageSrc from "./images/chef.jpg"; 
-const chefImage = document.createElement("img");
-chefImage.src = chefImageSrc;
-chefImage.alt = "ChefImage";
 
 function createHome(){
     const main = document.createElement("div"); 
+    main.classList.add("home");
 
-    main.classList.add("home")
+    const chefImage = document.createElement("img");
+    chefImage.src = chefImageSrc;
+    chefImage.alt = "Chef Image";
 
-    main.appendChild(createParagraph("Best Restaurant in the Country !!"))
-    main.appendChild(createParagraph("Making Delicious Exquisite Delicacies since 9/11"))
-    main.appendChild(chefImage)
-    main.appendChild(createParagraph("Order Online or Visit Us!"))
+    main.appendChild(createParagraph("Best Restaurant in the Country !!"));
+    main.appendChild(createParagraph("Making Delicious Exquisite Delicacies since 9/11"));
+    main.appendChild(chefImage);
+    main.appendChild(createParagraph("Order Online or Visit Us!"));
 
-    return main;
+    return main; // ✅ Return the newly created element
 }
 
 function createParagraph(text){
@@ -22,12 +22,9 @@ function createParagraph(text){
     return para;
 }
 
+// ✅ Home should return the new page, not modify `.content`
 function Home() {
-    const main = document.querySelector(".content"); // ✅ This selects the first element with the class 'content'
-    main.innerHTML = "";
-    main.appendChild(createHome());
-
-    return main;
+    return createHome(); 
 }
 
-export default Home
+export default Home;

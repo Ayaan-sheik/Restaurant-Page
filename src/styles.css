@@ -217,3 +217,117 @@ body {
         max-width: 90%;
     }
 }
+
+/* Contact component styling */
+
+/* Contact component main container */
+.Contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Section headers */
+  .Contact h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  /* First h3 should not have extra top margin */
+  .Contact h3:first-of-type {
+    margin-top: 0;
+  }
+  
+  /* Phone number container */
+  .Contact .phone-number {
+    display: flex;
+    align-items: center;
+    margin: 0.75rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    border-left: 3px solid transparent;
+  }
+  
+  /* Phone icon styling */
+  .Contact .phone-icon {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Number text styling */
+  .Contact .number-text {
+    color: #555;
+    font-weight: 500;
+  }
+  
+  /* Hover effect for phone numbers */
+  .Contact .phone-number:hover {
+    background-color: #f0f8ff;
+    border-left: 3px solid #0066cc;
+    color: #0066cc;
+    cursor: pointer;
+    transform: translateX(5px);
+  }
+  
+  /* Hover effect for number text */
+  .Contact .phone-number:hover .number-text {
+    color: #0066cc;
+  }
+  
+  /* Address image styling */
+  .Contact img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Image hover effect */
+  .Contact img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .Contact {
+      padding: 1.5rem;
+      margin: 0 1rem;
+    }
+    
+    .Contact h3 {
+      font-size: 1.1rem;
+    }
+    
+    .Contact .phone-number {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Responsive design for very small screens */
+  @media (max-width: 480px) {
+    .Contact {
+      padding: 1rem;
+    }
+    
+    .Contact .phone-icon {
+      font-size: 1rem;
+    }
+    
+    .Contact .number-text {
+      font-size: 0.9rem;
+    }
+  }
